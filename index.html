@@ -17,14 +17,7 @@
         <div class="xirilab-console">
             <div class="viewColor">Elige tu color</div>
             <div class="xirilab-column current-step xirilab-column-left">
-                <div class="step step01-color-picker">
-                    <img src="img/xirilab.jpg" alt="" id="img">
-                    <canvas id="canvas" class="dropper-cursor"></canvas>
-                    <div class="drag-and-drop-here">
-                        <img src="img/dnd.png" alt="Arrastra y suelta aquí">
-                        <strong>Arrastra y suelta aquí</strong> la foto de la que quieras copiar el color
-                    </div>
-                </div>
+                <p>Cargando...</p>
             </div>
             <div class="palette"></div>
             <div class="xirilab-column current-status-image">
@@ -41,7 +34,6 @@
                     <li id="s3">Forma</li>
                     <li id="s4">Aroma</li>
                     <li id="s5">Nombre</li>
-                    <li id="s6">Ordena</li>
                 </ul>
             </div>
         </div><!--xirilab-progress-bar-->
@@ -51,6 +43,14 @@
         </div><!-- /.xirilab-monitor -->
 
         <div class="xirilab-hidden-steps">
+            <div class="step step01-color-picker">
+                <img src="img/xirilab.jpg" alt="" id="img">
+                <canvas id="canvas" class="dropper-cursor"></canvas>
+                <div class="drag-and-drop-here">
+                    <img src="img/dnd.png" alt="Arrastra y suelta aquí">
+                    <strong>Arrastra y suelta aquí</strong> la foto de la que quieras copiar el color
+                </div>
+            </div>
             <div class="step step02-base-picker">
                 Elige la base
             </div>
@@ -60,6 +60,7 @@
         </div><!-- /.xirilab-hidden-steps -->
     
     </div><!-- /.xirilab-->
+    <script src="js/steps-switcher.js"></script>
     <script src="js/color-picker.js"></script>
 </body>
 

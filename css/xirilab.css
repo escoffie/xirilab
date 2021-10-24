@@ -19,3 +19,12 @@ body {
   max-width: 1046px;
   margin: auto;
 }
+
+.xirilab .step {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.xirilab .step.active {
+  opacity: 1;
+}
