@@ -257,6 +257,7 @@ var colorField = document.querySelector("#picked-color");
 var currentImg = document.querySelectorAll('.xirilab-console .current-status-image img');
 var swatches = [];
 var colorsRy = [];
+var dragAndDropHere = document.querySelector('.drag-and-drop-here');
 var imgW = 400;
 var canvas = document.querySelector("#canvas");
 var ctx = canvas.getContext("2d");
@@ -285,14 +286,14 @@ canvas.addEventListener("mousemove", function (e) {
   thisRGB = display_rgb(thisRGBRy);
   viewColor.style.backgroundColor = thisRGB;
   viewColor.style.color = getFontColor(thisRGBRy);
-  //viewColor.innerHTML =  thisRGB;
 
 }, false);
 
-// Para hacer drag&drop de otra imagen TODO: que se pueda seleccionar con un input
-theBody.addEventListener("dragenter", dragenter, false);
-theBody.addEventListener("dragover", dragover, false);
-theBody.addEventListener("drop", drop, false);
+// Para hacer drag&drop de otra imagen 
+// TODO: que se pueda seleccionar con un input
+dragAndDropHere.addEventListener("dragenter", dragenter, false);
+dragAndDropHere.addEventListener("dragover", dragover, false);
+dragAndDropHere.addEventListener("drop", drop, false);
 
 function dragenter(e) {
   e.stopPropagation();
@@ -371,15 +372,21 @@ function Swatch(RGBry, parent) {
     }
   }
   //this.element.innerHTML = this.hex + "<br>" + this.rgb + "<br>" + this.hsl;
-  this.element.innerHTML = this.hex;
+  this.element.innerHTML = `${this.hex}<div class="swatch-close">X</div>`;
   colorField.value = this.hex;
   currentImg.forEach(e => e.style.backgroundColor = this.hex);
   parent.appendChild(this.element)
   swatches.push(this.element);
+  this.element.firstElementChild.addEventListener('click', (e) => {
+    e.path[1].classList.remove('height');
+    setTimeout(() => {
+      palette.removeChild(e.path[1]);
+    }, 250);
+  });
   setTimeout(() => {
     this.element.classList.add('height');
   }, 10);
-  
+
 }
 
 canvas.addEventListener("click", function (e) {
@@ -400,8 +407,8 @@ palette.addEventListener("click", function (e) {
     for (var i = 0; i < colorsRy.length; i++) {
       e.target.classList.remove('selected');
       if (colorsRy[i].element == e.target) {
-        colorField.value = e.target.innerHTML;
-        currentImg.forEach(i => i.style.backgroundColor = e.target.innerHTML);
+        colorField.value = e.target.innerHTML.substr(0, 7);
+        currentImg.forEach(i => i.style.backgroundColor = e.target.innerHTML.substr(0, 7));
         e.target.classList.add('selected');
         break;
       }
@@ -419,7 +426,7 @@ palette.addEventListener("dblclick", function (e) {
         setTimeout(() => {
           colorsRy.splice(i, 1);
           palette.removeChild(e.target);
-        },250);
+        }, 250);
         break;
       }
     }
