@@ -66,6 +66,7 @@
   transition: 0.25s ease;
   cursor: pointer;
   position: relative;
+  text-transform: uppercase;
 }
 
 .swatch:hover {
@@ -124,6 +125,11 @@
   padding:2em;
   text-align: center;
   transition: background-color 0.5s;
+}
+
+.drag-and-drop-here img {
+  float: left;
+  width: 50px;
 }
 
 .drag-and-drop-here:hover {
