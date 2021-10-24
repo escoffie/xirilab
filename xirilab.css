@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Quattrocento+Sans");
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  font-family: Quattrocento Sans, Arial, sans-serif;
+  /*display: flex;*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.xirilab {
+  max-width: 1040px;
+  margin: auto;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="xirilab.css">
+    <link rel="stylesheet" href="progress-bar.css">
+    <link rel="stylesheet" href="color-picker.css">
+</head>
+
+<body>
+
+    <div class="xirilab">
+        <div class="xirilab-console">
+            <div class="viewColor">Elige tu color</div>
+            <div class="xirilab-column current-step xirilab-column-left">
+                <div class="step step01-color-picker">
+                    <img src="xirilab.jpg" alt="" id="img">
+                    <canvas id="canvas" class="dropper-cursor"></canvas>
+                </div>
+            </div>
+            <div class="palette"></div>
+            <div class="xirilab-column current-status-image">
+                <img src="img/bala-gato.png" alt="">
+                <img src="img/labios.png" alt="">
+            </div>
+        </div><!-- /.xirilab-console -->
+
+        <div class="xirilab-progress-bar">
+            <div class="container">
+                <ul class="progressbar">
+                    <li id="s1" class="active">Color</li>
+                    <li id="s2">Base</li>
+                    <li id="s3">Forma</li>
+                    <li id="s4">Aroma</li>
+                    <li id="s5">Nombre</li>
+                    <li id="s6">Ordena</li>
+                </ul>
+            </div>
+        </div><!--xirilab-progress-bar-->
+        
+        <div class="xirilab-monitor">
+            <p><input type="text" value="" id="picked-color" /></p>
+        </div><!-- /.xirilab-monitor -->
+    
+    </div><!-- /.xirilab-->
+    <script src="js/color-picker.js"></script>
+</body>
+
+</html>

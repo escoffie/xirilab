@@ -1,0 +1,83 @@
+.xirilab-console {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.xirilab-console .xirilab-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  margin:10px;
+}
+
+.xirilab-console .xirilab-column-left {
+  flex: 0 0 400px;
+}
+
+.xirilab-console .current-status-image img {
+  max-width: 400px;
+  width: auto;
+  background-color: red;
+  transition: background-color 1s;
+  margin-bottom: 20px;
+}
+
+.xirilab-console .current-status-image img, 
+#canvas, .viewColor, .swatch {
+  border-radius:7px;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+}
+
+#img {
+  display: none;
+}
+
+.viewColor {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #ff96e3;
+  margin:10px
+}
+
+.palette {
+  flex: 0 0 200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.swatch {
+  width: 100%;
+  height: 0; /* al crearse se setea a 64px con la clase .height */
+  overflow: hidden;
+  padding: 0px;
+  opacity: 0;
+  line-height: 25px;
+  margin:0px;
+  border: solid 1px transparent;
+  transition: 0.25s ease;
+  cursor: pointer;
+}
+
+.height {
+  height: 64px;
+  padding: 15px;
+  opacity: 1;
+  margin:10px;
+}
+
+.selected {
+  border: solid 1px black;
+  box-shadow: 0 0px 10px rgba(0,0,0,0.8);
+}
+
+.dropper-cursor {
+  /*cursor: url(data:image/x-icon;base64,AAABAAEAEBAAAAAAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAD///8BAAAAfwAAAIH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BAAAAcQAAAN8AAADTAAAArwAAAE8AAAAJ////Af///wH///8B////Af///wH///8B////Af///wH///8B////AQAAAJEAAADLAAAAEwAAAHsAAADDAAAA3wAAADP///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BAAAAuQAAAHX///8B////AQAAAF0AAADtAAAAOf///wH///8B////Af///wH///8B////Af///wH///8B////AQAAAFMAAAC/////Af///wH///8BAAAAUQAAAO0AAAA5////Af///wH///8B////Af///wH///8B////Af///wEAAAANAAAA5wAAAFH///8B////Af///wEAAABRAAAA7QAAADn///8B////Af///wH///8B////Af///wH///8B////AQAAAD0AAADtAAAARf///wH///8B////AQAAAFEAAADtAAAAOQAAACP///8B////Af///wH///8B////Af///wH///8BAAAARQAAAO0AAABF////Af///wH///8BAAAAUQAAAO0AAADvAAAAmf///wH///8B////Af///wH///8B////Af///wEAAABFAAAA7QAAAEX///8B////AQAAADUAAADxAAAA/wAAAPcAAAAr////Af///wH///8B////Af///wH///8B////AQAAAEUAAADtAAAARQAAADUAAADvAAAA/wAAAPcAAABFAAAALf///wH///8B////Af///wH///8B////Af///wH///8BAAAARQAAAO0AAADvAAAA/wAAAPcAAABFAAAAgwAAAPsAAABX////Af///wH///8B////Af///wH///8B////AQAAACUAAADvAAAA/wAAAPcAAABFAAAAgwAAAP8AAAD/AAAA+wAAAE////8B////Af///wH///8B////Af///wEAAAADAAAAoQAAAPcAAABFAAAAgwAAAP8AAAD/AAAA/wAAAP8AAADf////Af///wH///8B////Af///wH///8B////AQAAAAMAAAAvAAAALQAAAPsAAAD/AAAA/wAAAP8AAAD/AAAA+////wH///8B////Af///wH///8B////Af///wH///8B////Af///wEAAABXAAAA+wAAAP8AAAD/AAAA/wAAALX///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AQAAAE8AAADfAAAA+wAAALUAAAAXAAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//w==),
+    default;*/
+    cursor: crosshair;
+}
