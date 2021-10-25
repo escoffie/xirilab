@@ -364,7 +364,7 @@ function Swatch(RGBry, parent) {
   swatches.forEach(current => current.classList.remove('selected'));
 
   this.att = {}
-  this.att.class = "swatch selected";
+  this.att.class = "swatch selected mate";
   this.att.style = "background-color:" + this.rgb + "; color:" + getFontColor(RGBry) + ";";
   for (var name in this.att) {
     if (this.att.hasOwnProperty(name)) {
@@ -460,3 +460,17 @@ function oMousePos(canvas, evt) {
     y: Math.round(evt.clientY - ClientRect.top)
   }
 }
+
+// Elegir base
+const basesArray = document.querySelectorAll('.base');
+
+basesArray.forEach((base, i) => {
+    base.addEventListener('click', () => {
+        swatches.forEach(current => {
+          current.classList.remove('base-0');
+          current.classList.remove('base-1');
+          current.classList.remove('base-2');
+          current.classList.add(`base-${i}`);
+        })
+    })
+})

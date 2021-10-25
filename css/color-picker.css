@@ -28,7 +28,9 @@
 .xirilab-console .current-status-image img,
 #canvas,
 .viewColor,
-.swatch {
+.swatch,
+.base.active,
+.base:hover {
   border-radius: 7px;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
   border: solid 2px white;
@@ -67,6 +69,20 @@
   cursor: pointer;
   position: relative;
   text-transform: uppercase;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.swatch.base-0 {
+  background-image: url(../img/bases-textura/mate.png);
+}
+
+.swatch.base-1 {
+  background-image: url(../img/bases-textura/brillante.png);
+}
+
+.swatch.base-2 {
+  background-image: url(../img/bases-textura/metalico.png);
 }
 
 .swatch:hover {

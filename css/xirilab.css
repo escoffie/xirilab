@@ -22,9 +22,65 @@ body {
 
 .xirilab .step {
   opacity: 0;
-  transition: opacity 1s;
+  transition: opacity .25s;
 }
 
 .xirilab .step.active {
   opacity: 1;
+}
+
+.base img {
+  max-width: 100%;
+}
+
+.base {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin:10px 0;
+  grid-column-gap: 20px;
+  transition: all 0.5s
+}
+
+.base.active,
+.base:hover {
+  padding: 10px;
+  background-color: rgb(232, 232, 232);
+}
+
+.formas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin:10px 0;
+  grid-gap: 20px;
+  transition: all 0.5s
+}
+
+.formas div {
+  text-align: center;
+  position: relative;
+}
+
+.formas div img {
+  display: block;
+  margin: 5px auto;
+}
+
+.formas div:after { /* ADDED */
+  content: '';
+  position: absolute;
+  border-left: 1px solid #e71773;
+  right: -10px; /* adjust this */
+  height: 80px; /* adjust this */
+  top: 10px
+}
+
+.formas div:last-child:after,
+.formas div:nth-child(4n):after { /* ADDED */
+  display: none; /* Hide the divider for the last block */
 }

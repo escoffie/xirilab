@@ -36,10 +36,12 @@
                     <li id="s5">Nombre</li>
                 </ul>
             </div>
-        </div><!--xirilab-progress-bar-->
-        
+        </div>
+        <!--xirilab-progress-bar-->
+
         <div class="xirilab-monitor">
             <p><input type="text" value="" id="picked-color" /></p>
+            <p><input type="text" value="" id="picked-base" /></p>
         </div><!-- /.xirilab-monitor -->
 
         <div class="xirilab-hidden-steps">
@@ -52,13 +54,48 @@
                 </div>
             </div>
             <div class="step step02-base-picker">
-                Elige la base
+                <h2>Elige la base</h2>
+                <div class="bases">
+                    <div class="base">
+                        <div class="col"><img src="img/bases/mate_txt.png" alt=""></div>
+                        <div class="col"><img src="img/bases/mate_img.png" alt=""></div>
+                    </div>
+                    <div class="base">
+                        <div class="col"><img src="img/bases/brillante_txt.png" alt=""></div>
+                        <div class="col"><img src="img/bases/brillante_img.png" alt=""></div>
+                    </div>
+                    <div class="base">
+                        <div class="col"><img src="img/bases/metalico_txt.png" alt=""></div>
+                        <div class="col"><img src="img/bases/metalico_img.png" alt=""></div>
+                    </div>
+                </div>
             </div>
-            <div class="step step03-shape-picker">Ahora la forma</div>
+            <div class="step step03-shape-picker">
+                <h2>Ahora la forma</h2>
+                <div class="formas">
+                    <div><img src="img/formas/duo.png" data-forma="duo" alt="duo" class="forma">Dúo</div>
+                    <div><img src="img/formas/estrella.png" data-forma="estrella" alt="estrella" class="forma">Estrella
+                    </div>
+                    <div><img src="img/formas/gato.png" data-forma="gato" alt="gato" class="forma">Gato</div>
+                    <div><img src="img/formas/cuadrada.png" data-forma="cuadrada" alt="cuadrada" class="forma">Cuadrada
+                    </div>
+                    <div><img src="img/formas/tulipan.png" data-forma="tulipan" alt="tulipan" class="forma">Tulipán
+                    </div>
+                    <div><img src="img/formas/huella.png" data-forma="huella" alt="huella" class="forma">Huella</div>
+                    <div><img src="img/formas/clasica.png" data-forma="clasica" alt="clasica" class="forma">Clásica
+                    </div>
+                    <div><img src="img/formas/spicy.png" data-forma="spicy" alt="spicy" class="forma">Spicy</div>
+                    <div><img src="img/formas/corazon.png" data-forma="corazon" alt="corazon" class="forma">Corazón
+                    </div>
+                    <div><img src="img/formas/diamante.png" data-forma="diamante" alt="diamante" class="forma">Diamante
+                    </div>
+                    <div><img src="img/formas/flor.png" data-forma="flor" alt="flor" class="forma">Flor</div>
+                </div>
+            </div>
             <div class="step step04-scent-picker">El aroma</div>
             <div class="step step05-name-picker">Ponle nombre</div>
         </div><!-- /.xirilab-hidden-steps -->
-    
+
     </div><!-- /.xirilab-->
     <script src="js/steps-switcher.js"></script>
     <script src="js/color-picker.js"></script>
