@@ -21,7 +21,7 @@
             </div>
             <div class="palette"></div>
             <div class="xirilab-column current-status-image">
-                <img src="img/bala-gato.png" alt="">
+                <img src="img/balas/bala-clasica.png" alt="" id="forma-image">
                 <img src="img/labios.png" alt="">
             </div>
         </div><!-- /.xirilab-console -->
@@ -42,6 +42,10 @@
         <div class="xirilab-monitor">
             <p><input type="text" value="" id="picked-color" /></p>
             <p><input type="text" value="" id="picked-base" /></p>
+            <p><input type="text" value="clasica" id="picked-forma" /></p>
+            <p><input type="text" value="Sin glitter" id="picked-glitter" /></p>
+            <p><input type="text" value="" id="picked-aroma" /></p>
+            <p><input type="text" value="" id="picked-nombre" /></p>
         </div><!-- /.xirilab-monitor -->
 
         <div class="xirilab-hidden-steps">
@@ -56,15 +60,15 @@
             <div class="step step02-base-picker">
                 <h2>Elige la base</h2>
                 <div class="bases">
-                    <div class="base">
+                    <div class="base" data-base="Mate">
                         <div class="col"><img src="img/bases/mate_txt.png" alt=""></div>
                         <div class="col"><img src="img/bases/mate_img.png" alt=""></div>
                     </div>
-                    <div class="base">
+                    <div class="base" data-base="Brillante">
                         <div class="col"><img src="img/bases/brillante_txt.png" alt=""></div>
                         <div class="col"><img src="img/bases/brillante_img.png" alt=""></div>
                     </div>
-                    <div class="base">
+                    <div class="base" data-base="Metálica">
                         <div class="col"><img src="img/bases/metalico_txt.png" alt=""></div>
                         <div class="col"><img src="img/bases/metalico_img.png" alt=""></div>
                     </div>
@@ -73,7 +77,7 @@
             <div class="step step03-shape-picker">
                 <h2>Ahora la forma</h2>
                 <div class="formas">
-                    <div><img src="img/formas/duo.png" data-forma="duo" alt="duo" class="forma">Dúo</div>
+                    <!--<div><img src="img/formas/duo.png" data-forma="duo" alt="duo" class="forma">Dúo</div>-->
                     <div><img src="img/formas/estrella.png" data-forma="estrella" alt="estrella" class="forma">Estrella
                     </div>
                     <div><img src="img/formas/gato.png" data-forma="gato" alt="gato" class="forma">Gato</div>
@@ -82,7 +86,7 @@
                     <div><img src="img/formas/tulipan.png" data-forma="tulipan" alt="tulipan" class="forma">Tulipán
                     </div>
                     <div><img src="img/formas/huella.png" data-forma="huella" alt="huella" class="forma">Huella</div>
-                    <div><img src="img/formas/clasica.png" data-forma="clasica" alt="clasica" class="forma">Clásica
+                    <div class="active"><img src="img/formas/clasica.png" data-forma="clasica" alt="clasica" class="forma">Clásica
                     </div>
                     <div><img src="img/formas/spicy.png" data-forma="spicy" alt="spicy" class="forma">Spicy</div>
                     <div><img src="img/formas/corazon.png" data-forma="corazon" alt="corazon" class="forma">Corazón
@@ -91,9 +95,62 @@
                     </div>
                     <div><img src="img/formas/flor.png" data-forma="flor" alt="flor" class="forma">Flor</div>
                 </div>
+                <h2>Puedes agregar</h2>
+                <div>
+                    <div class="glitter-switch" id="glitter-switch" data-base="glitter">
+                        <div class="col"><img src="img/bases/glitter_txt.png" alt=""></div>
+                        <div class="col"><img src="img/bases/glitter_img.png" alt=""></div>
+                    </div>
+                </div>
             </div>
-            <div class="step step04-scent-picker">El aroma</div>
-            <div class="step step05-name-picker">Ponle nombre</div>
+            <div class="step step04-scent-picker">
+                <h2>Elige el aroma</h2>
+                <div class="aromas">
+                    <div class="aroma" data-aroma="Fresa">
+                        <img src="img/aromas/fresa.png">
+                        <p>Fresa</p>
+                    </div>
+                    <div class="aroma" data-aroma="Chocolate">
+                        <img src="img/aromas/chocolate.png">
+                        <p>Chocolate</p>
+                    </div>
+                    <div class="aroma" data-aroma="Vainilla">
+                        <img src="img/aromas/vainilla.png">
+                        <p>Vainilla</p>
+                    </div>
+                    <div class="aroma" data-aroma="Lavanda">
+                        <img src="img/aromas/lavanda.png">
+                        <p>Lavanda</p>
+                    </div>
+                    <div class="aroma" data-aroma="Rosas">
+                        <img src="img/aromas/rosas.png">
+                        <p>Rosas</p>
+                    </div>
+                    <div class="aroma" data-aroma="Malvavisco">
+                        <img src="img/aromas/malvavisco.png">
+                        <p>Malvavisco</p>
+                    </div>
+                    <div class="aroma" data-aroma="Cookies & Cream">
+                        <img src="img/aromas/cookies-and-cream.png">
+                        <p>Cookies & Cream</p>
+                    </div>
+                    <div class="aroma" data-aroma="Panqué de nuez">
+                        <img src="img/aromas/panque-de-nuez.png">
+                        <p>Panqué de nuez</p>
+                    </div>
+                    <div class="aroma" data-aroma="Bergamota">
+                        <img src="img/aromas/bergamota.png">
+                        <p>Bergamota</p>
+                    </div>
+                </div>
+            </div>
+            <div class="step step05-name-picker">
+                <h2>¿Cómo se llamará?</h2>
+                <img src="img/palabras.png" style="max-width: 100%;">
+                <h3>Ponle un nombre</h3>
+                <p><input class="ponle-nombre" id="ponle-nombre" type="text" placeholder="Cómo se llamará"></p>
+                <button>Enviar</button>
+            </div>
         </div><!-- /.xirilab-hidden-steps -->
 
     </div><!-- /.xirilab-->

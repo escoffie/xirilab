@@ -254,6 +254,14 @@ var palette = document.querySelector(".palette");
 var img = document.getElementById("img");
 var viewColor = document.querySelector(".viewColor");// color actual
 var colorField = document.querySelector("#picked-color");
+var baseField = document.querySelector("#picked-base");
+var formaField = document.querySelector("#picked-forma");
+var glitterField = document.querySelector("#picked-glitter");
+var formaImg = document.querySelector("#forma-image");
+var aromaField = document.querySelector("#picked-aroma");
+var nombreField = document.querySelector("#picked-nombre");
+var ponleNombre = document.querySelector("#ponle-nombre");
+var glitterSwitch = document.querySelector("#glitter-switch");
 var currentImg = document.querySelectorAll('.xirilab-console .current-status-image img');
 var swatches = [];
 var colorsRy = [];
@@ -465,12 +473,66 @@ function oMousePos(canvas, evt) {
 const basesArray = document.querySelectorAll('.base');
 
 basesArray.forEach((base, i) => {
-    base.addEventListener('click', () => {
-        swatches.forEach(current => {
-          current.classList.remove('base-0');
-          current.classList.remove('base-1');
-          current.classList.remove('base-2');
-          current.classList.add(`base-${i}`);
-        })
+  base.addEventListener('click', () => {
+    basesArray.forEach(base => base.classList.remove('active'));
+    base.classList.add('active');
+    baseField.value = base.dataset.base;
+    swatches.forEach(current => {
+      current.classList.remove('base-0');
+      current.classList.remove('base-1');
+      current.classList.remove('base-2');
+      current.classList.add(`base-${i}`);
     })
+  })
+})
+
+// Elegir forma
+const formasArray = document.querySelectorAll('.formas div');
+
+formasArray.forEach((forma, i) => {
+  forma.addEventListener('click', () => {
+    formasArray.forEach(forma => forma.classList.remove('active'));
+    forma.classList.add('active');
+    formaField.value = forma.childNodes[0].dataset.forma;
+    formaImg.src = `img/balas/bala-${forma.childNodes[0].dataset.forma}.png`;
+    swatches.forEach(current => {
+      for(let a = 0; a < formasArray.length; a++) {
+        current.classList.remove(`forma-${a}`);
+      }
+      current.classList.add(`forma-${i}`);
+    })
+  })
+})
+
+// Poner/quitar glitter
+let addGlitter = false;
+glitterSwitch.addEventListener('click', () => {
+  addGlitter = !addGlitter;
+  if (addGlitter) {
+    glitterSwitch.classList.add('active');
+    swatches.forEach(current => current.classList.add('glitter'));
+    glitterField.value = 'Con glitter';
+  } else { 
+    glitterSwitch.classList.remove('active');
+    swatches.forEach(current => current.classList.remove('glitter'));
+    glitterField.value = 'Sin glitter';
+  }
+
+});
+
+// Aroma
+
+const aromasArray = document.querySelectorAll('.aroma');
+
+aromasArray.forEach((aroma, i) => {
+  aroma.addEventListener('click', () => {
+    aromasArray.forEach(aroma => aroma.classList.remove('active'));
+    aroma.classList.add('active');
+    aromaField.value = aroma.dataset.aroma;
+  })
+})
+
+// nombre 
+ponleNombre.addEventListener('change', () => {
+  nombreField.value = ponleNombre.value;
 })

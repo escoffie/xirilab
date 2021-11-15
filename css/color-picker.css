@@ -30,7 +30,13 @@
 .viewColor,
 .swatch,
 .base.active,
-.base:hover {
+.base:hover,
+.glitter-switch.active,
+.glitter-switch:hover,
+.formas div.active,
+.formas div:hover,
+.aroma.active,
+.aroma:hover {
   border-radius: 7px;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
   border: solid 2px white;
@@ -83,6 +89,17 @@
 
 .swatch.base-2 {
   background-image: url(../img/bases-textura/metalico.png);
+}
+.swatch.base-0.glitter {
+  background-image: url(../img/bases-textura/mate.png), url(../img/bases-textura/glitter.png);
+}
+
+.swatch.base-1.glitter {
+  background-image: url(../img/bases-textura/brillante.png), url(../img/bases-textura/glitter.png);
+}
+
+.swatch.base-2.glitter {
+  background-image: url(../img/bases-textura/metalico.png), url(../img/bases-textura/glitter.png);
 }
 
 .swatch:hover {
