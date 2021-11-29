@@ -15,31 +15,9 @@
 
     <div class="xirilab">
         <div id="encabezado">
-            <h1>Selecciona tu color</h1>
-            <p>Haz clic sobre el color que te gusta. Puedes subir tu propia foto si lo deseas.</p>
-        </div>
-        <div class="xirilab-console">
-            <div class="xirilab-column current-step xirilab-column-left">
-                <p>Cargando...</p>
-            </div>
-            <div class="xirilab-column middle">
-                <div>
-                    <h4>Refina tu búsqueda</h4>
-                    <ol>
-                        <li>Añade y compara</li>
-                        <li>Elimina los que no te gusten</li>
-                        <li>Haz clic sobre uno u otro para ver una vista previa</li>
-                        <li>Selecciona el que te gusta y continúa</li>
-                        <li>Puedes cambiar entre los que se queden en la lista en cualquier momento</li>
-                    </ol>
-                </div>
-                <div class="palette"></div>
-            </div>
-            <div class="xirilab-column current-status-image">
-                <img src="img/balas/bala-clasica.png" alt="" id="forma-image">
-                <img src="img/labios.png" alt="">
-            </div>
-        </div><!-- /.xirilab-console -->
+            <h1></h1>
+            <p></p>
+        </div><!-- /.encabezado-->
 
         <div class="xirilab-progress-bar">
             <div class="container">
@@ -49,10 +27,37 @@
                     <li id="s3">Forma</li>
                     <li id="s4">Aroma</li>
                     <li id="s5">Nombre</li>
+                    <li id="s6">Revisar</li>
                 </ul>
             </div>
         </div>
         <!--xirilab-progress-bar-->
+
+        <div class="xirilab-console">
+            <div class="xirilab-column current-step xirilab-column-left">
+                <p>Cargando...</p>
+            </div>
+            <div class="xirilab-column middle">
+                <div class="xirilab-refina">
+                    <h4>Refina tu búsqueda</h4>
+                    <ol>
+                        <li>Añade y compara</li>
+                        <li>Elimina los que no te gusten</li>
+                        <li>Cambia entre ellos</li>
+                        <li>Selecciona y haz clic en Continuar</li>
+                    </ol>
+                </div>
+                <div class="palette"></div>
+                <div id="nav">                    
+                    <a href="#" id="nav-regresar">Regresar<br><span class="chevron-arrow-left"></span></a>
+                    <a href="#" id="nav-continuar">Continuar<br><span class="chevron-arrow-right"></span></a>
+                </div>
+            </div>
+            <div class="xirilab-column current-status-image">
+                <img src="img/balas/bala-clasica.png" alt="" id="forma-image">
+                <img src="img/labios.png" alt="">
+            </div>
+        </div><!-- /.xirilab-console -->
 
         <div class="xirilab-monitor">
             <p><input type="text" value="" id="picked-color" /></p>
@@ -75,7 +80,6 @@
                 </div>
             </div>
             <div class="step step02-base-picker">
-                <h2>Elige la base</h2>
                 <div class="bases">
                     <div class="base" data-base="Mate">
                         <div class="col"><img src="img/bases/mate_txt.png" alt=""></div>
@@ -92,7 +96,6 @@
                 </div>
             </div>
             <div class="step step03-shape-picker">
-                <h2>Ahora la forma</h2>
                 <div class="formas">
                     <!--<div><img src="img/formas/duo.png" data-forma="duo" alt="duo" class="forma">Dúo</div>-->
                     <div><img src="img/formas/estrella.png" data-forma="estrella" alt="estrella" class="forma">Estrella
@@ -121,7 +124,6 @@
                 </div>
             </div>
             <div class="step step04-scent-picker">
-                <h2>Elige el aroma</h2>
                 <div class="aromas">
                     <div class="aroma" data-aroma="Fresa">
                         <img src="img/aromas/fresa.png">
@@ -162,11 +164,22 @@
                 </div>
             </div>
             <div class="step step05-name-picker">
-                <h2>¿Cómo se llamará?</h2>
                 <img src="img/palabras.png" style="max-width: 100%;">
                 <h3>Ponle un nombre</h3>
                 <p><input class="ponle-nombre" id="ponle-nombre" type="text" placeholder="Cómo se llamará"></p>
-                <button>Enviar</button>
+            </div>
+            <div class="step step06-review">
+                <h2>Resumen de tu personalización</h2>
+                <ul id="review">
+                    <li><span class="label">Color</span><span class="value" id="seleccion-color"></span></li>
+                    <li><span class="label">Base</span><span class="value" id="seleccion-base"></span></li>
+                    <li><span class="label">Forma</span><span class="value" id="seleccion-forma"></span></li>
+                    <li><span class="label">Glitter</span><span class="value" id="seleccion-glitter"></span></li>
+                    <li><span class="label">Aroma</span><span class="value" id="seleccion-aroma"></span></li>
+                    <li><span class="label">Nombre</span><span class="value" id="seleccion-nombre"></span></li>
+                </ul>
+                <p><strong>Importante:</strong> Lo que ves en la previsualización es una aproximación al resultado final. El resultado puede variar ligeramente, ya que las diferentes pantallas y condiciones de iluminación pueden hacer que el color que se percibe sea ligeramente diferente.</p>
+                <button class="btn-pedir">¡Lo quiero! Hacer mi pedido</button>
             </div>
         </div><!-- /.xirilab-hidden-steps -->
 

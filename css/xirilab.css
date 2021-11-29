@@ -130,6 +130,77 @@ body {
   width: 100%;
 }
 
-h2, h3 {
+h1, h2, h3, h4 {
   color:#e71773;
+}
+
+#encabezado {
+  text-align: center;
+}
+
+.xirilab-refina ol {
+  font-size:12px;
+  margin: 0;
+  padding-left: 16px;
+}
+
+.chevron-arrow-left {
+  display: inline-block;
+  border-right: 4px solid black;
+  border-bottom: 4px solid black;
+  width: 10px; height: 10px;
+  transform: rotate(-225deg);
+}
+
+.chevron-arrow-right {
+  display: inline-block;
+  border-right: 4px solid black;
+  border-bottom: 4px solid black;
+  width: 10px; height: 10px;
+  transform: rotate(-45deg);
+}
+
+#nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#nav a {
+  text-decoration: none;
+  color: #e71773;
+  text-align: center;
+  display:inline-block;
+  padding: 5px;
+  margin: 2px;
+  border: 1px solid #e71773;
+  border-radius: 5px;
+}
+
+#nav a:hover span{
+  border-color:#fff !important;
+}
+
+.xirilab-monitor {
+  display: none;
+}
+
+#review {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#review li {
+  display:grid;
+  grid-template-columns: 2fr 4fr;
+  padding: 7px;
+  margin:2px 0;
+  background-color: #efefef;
+}
+
+#review .label {
+  font-weight: bold;
+}
+#review .value {
+  text-transform:uppercase;
 }

@@ -36,10 +36,27 @@
 .formas div.active,
 .formas div:hover,
 .aroma.active,
-.aroma:hover {
+.aroma:hover,
+#nav a,
+.btn-pedir {
   border-radius: 7px;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
   border: solid 2px white;
+}
+
+.btn-pedir {
+  display:block;
+  width: 100%;
+  padding:10px;
+  font-size:1.2em;
+  background-color:#e71773;
+  color:#fff;
+}
+
+#nav a:hover
+.btn-pedir:hover {
+  background-color:#e71773;
+  color: #fff;
 }
 
 #img {
