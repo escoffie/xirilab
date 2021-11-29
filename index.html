@@ -14,12 +14,27 @@
 <body>
 
     <div class="xirilab">
+        <div id="encabezado">
+            <h1>Selecciona tu color</h1>
+            <p>Haz clic sobre el color que te gusta. Puedes subir tu propia foto si lo deseas.</p>
+        </div>
         <div class="xirilab-console">
-            <div class="viewColor">Elige tu color</div>
             <div class="xirilab-column current-step xirilab-column-left">
                 <p>Cargando...</p>
             </div>
-            <div class="palette"></div>
+            <div class="xirilab-column middle">
+                <div>
+                    <h4>Refina tu búsqueda</h4>
+                    <ol>
+                        <li>Añade y compara</li>
+                        <li>Elimina los que no te gusten</li>
+                        <li>Haz clic sobre uno u otro para ver una vista previa</li>
+                        <li>Selecciona el que te gusta y continúa</li>
+                        <li>Puedes cambiar entre los que se queden en la lista en cualquier momento</li>
+                    </ol>
+                </div>
+                <div class="palette"></div>
+            </div>
             <div class="xirilab-column current-status-image">
                 <img src="img/balas/bala-clasica.png" alt="" id="forma-image">
                 <img src="img/labios.png" alt="">
@@ -52,9 +67,11 @@
             <div class="step step01-color-picker">
                 <img src="img/xirilab.jpg" alt="" id="img">
                 <canvas id="canvas" class="dropper-cursor"></canvas>
+                <div class="viewColor">Haz clic cuando veas el color que te gusta</div>
                 <div class="drag-and-drop-here">
                     <img src="img/dnd.png" alt="Arrastra y suelta aquí">
-                    <strong>Arrastra y suelta aquí</strong> la foto de la que quieras copiar el color
+                    <strong>Arrastra y suelta aquí</strong> la foto de la que quieras copiar el color, o haz clic aquí para seleccionarla de tu dispositivo.
+                    <input type="file" name="customImg" id="customImg" style="display:none">
                 </div>
             </div>
             <div class="step step02-base-picker">

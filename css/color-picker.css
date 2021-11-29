@@ -52,7 +52,7 @@
   line-height: 50px;
   text-align: center;
   background-color: #ff96e3;
-  margin: 10px;
+  margin: 10px 0;
 }
 
 .palette {
@@ -158,6 +158,7 @@
   padding:2em;
   text-align: center;
   transition: background-color 0.5s;
+  cursor: pointer;
 }
 
 .drag-and-drop-here img {

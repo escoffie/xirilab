@@ -263,6 +263,8 @@ var nombreField = document.querySelector("#picked-nombre");
 var ponleNombre = document.querySelector("#ponle-nombre");
 var glitterSwitch = document.querySelector("#glitter-switch");
 var currentImg = document.querySelectorAll('.xirilab-console .current-status-image img');
+var fileToRead = document.querySelector("#customImg");
+var customImgReset = document.querySelector("#customImgReset");
 var swatches = [];
 var colorsRy = [];
 var dragAndDropHere = document.querySelector('.drag-and-drop-here');
@@ -302,6 +304,9 @@ canvas.addEventListener("mousemove", function (e) {
 dragAndDropHere.addEventListener("dragenter", dragenter, false);
 dragAndDropHere.addEventListener("dragover", dragover, false);
 dragAndDropHere.addEventListener("drop", drop, false);
+dragAndDropHere.addEventListener("click", () => {
+  customImg.click();
+})
 
 function dragenter(e) {
   e.stopPropagation();
@@ -322,6 +327,12 @@ function drop(e) {
 
   handleFiles(theFiles);
 }
+
+fileToRead.addEventListener("change", (evt) => {
+  var tgt = evt.target || window.event.srcElement,
+    files = tgt.files;
+  handleFiles(files);
+});
 
 function handleFiles(theFiles) {
   for (var i = 0; i < theFiles.length; i++) {
